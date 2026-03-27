@@ -1,4 +1,3 @@
-/* Add these styles to your existing CSS file */
 *{
     margin:0;
     padding:0;
@@ -11,12 +10,14 @@
     --body-color: #efefef;
     --nav-color: #1876f2;
     --bg-color: #fff;
+    --text-color: #333;
 }
 
 .dark-theme{
     --body-color: #0a0a0a;
     --nav-color: #000;
     --bg-color: #000;
+    --text-color: #fff;
 }
 
 .icon-logo{
@@ -25,6 +26,7 @@
 body{
     background: var(--body-color);
     transition: background 0.3s;
+    color: var(--text-color);
 }
 nav{
     display:flex;
@@ -48,7 +50,7 @@ nav{
   list-style: none;
   display: inline-block;
 }
-.nav-left ul li img{
+.nav-left ul li a img{
   width: 28px;
   margin: 0 15px;
 }
@@ -69,8 +71,8 @@ nav{
     align-items: center;
     padding: 0 15px;
 }
-.search-box img{
-    width: 18px;
+.search-box i{
+    color: #666;
 }
 .search-box input{
     width: 100%;
@@ -296,21 +298,21 @@ nav{
     padding: 20px;
     color: #626262;
 }
-.user-porfile{
+.user-profile{
     display: flex;
     align-items: center;
 }
-.user-porfile img{
+.user-profile img{
     width: 45px;
     border-radius: 50%;
     margin-right: 10px;
 }
-.user-porfile p{
+.user-profile p{
     margin-bottom: -5px;
     font-weight: 500;
     color: #626262;
 }
-.user-porfile small{
+.user-profile small{
     font-size: 12px;
 }
 .post-input-container{
@@ -349,7 +351,7 @@ nav{
     color: #626262;
     margin: 20px 0;
 }
-.user-porfile span{
+.user-profile span{
     font-size: 13px;
     color: #9a9a9a;
 }
@@ -437,13 +439,13 @@ nav{
     max-height: 450px;
 }
 
-.user-porfile a{
+.user-profile a{
     font-size: 12px;
     color: #1876f2;
     text-decoration: none;
 }
 
-.settings-menu-innner{
+.settings-menu-inner{
     padding: 20px;
 }
 
@@ -497,28 +499,24 @@ nav{
     background: #242323;
 }
 
-
-
-    
-
-/* Navigation Improvements */
+/* New Facebook-like Styles */
 .nav-icon {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #65676b;
     text-decoration: none;
     padding: 8px 15px;
     border-radius: 8px;
-    transition: all 0.3s;
+    color: white;
+    position: relative;
 }
 
 .nav-icon:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .nav-icon i {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 4px;
 }
 
@@ -528,19 +526,7 @@ nav{
 }
 
 .nav-icon.active {
-    color: #1876f2;
-}
-
-.nav-icon.active::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 3px;
-    background: #1876f2;
-    border-radius: 3px 3px 0 0;
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .nav-left ul {
@@ -550,98 +536,53 @@ nav{
 
 .nav-left ul li {
     position: relative;
-    list-style: none;
 }
 
-/* Page Content Styles */
-.page-title {
-    margin: 20px 0;
-    color: var(--text-color);
-}
-
-#page-content {
-    min-height: 500px;
-}
-
-/* Home Page Specific */
-.story-gallery {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    overflow-x: auto;
-    padding: 10px 0;
-}
-
-.story {
-    flex: 0 0 auto;
-    width: 120px;
-    height: 200px;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.story-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s;
-}
-
-.story:hover .story-img {
-    transform: scale(1.05);
-}
-
-.story-profile {
+.notification-badge, .message-count {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 40px;
-    height: 40px;
+    top: -5px;
+    right: 5px;
+    background: #ff0000;
+    color: white;
     border-radius: 50%;
-    border: 3px solid #1876f2;
-}
-
-.story-add {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
-    background: #1876f2;
-    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 20px;
 }
 
-.story-name {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: white;
-    font-weight: 500;
-    padding: 0 5px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+.message-count {
+    background: #1876f2;
 }
 
-/* Profile Page */
+/* Page Styles */
+.page-content {
+    display: none;
+}
+
+.page-content.active {
+    display: block;
+}
+
+.page-title {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Profile Page Styles */
 .profile-header {
     background: var(--bg-color);
     border-radius: 10px;
-    overflow: hidden;
     margin-bottom: 20px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    overflow: hidden;
 }
 
 .cover-photo {
-    height: 320px;
+    height: 300px;
     background: linear-gradient(45deg, #1876f2, #0d5bb8);
     position: relative;
 }
@@ -652,7 +593,6 @@ nav{
     align-items: flex-end;
     position: relative;
     top: -80px;
-    padding-bottom: 0;
 }
 
 .profile-pic-large {
@@ -660,24 +600,13 @@ nav{
     height: 170px;
     border-radius: 50%;
     border: 5px solid var(--bg-color);
-    margin-right: 20px;
-}
-
-.profile-name {
-    margin-bottom: 10px;
-    color: var(--text-color);
-}
-
-.profile-stats {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 15px;
+    margin-right: 30px;
 }
 
 .profile-actions {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .btn {
@@ -686,9 +615,6 @@ nav{
     border: none;
     cursor: pointer;
     font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
 }
 
 .btn-primary {
@@ -701,102 +627,54 @@ nav{
     color: #050505;
 }
 
-/* Messenger Page */
+/* Messenger Page Styles */
 .messenger-container {
-    display: flex;
-    height: 600px;
     background: var(--bg-color);
     border-radius: 10px;
-    overflow: hidden;
-}
-
-.conversations-list {
-    width: 300px;
-    border-right: 1px solid #ddd;
-    overflow-y: auto;
-}
-
-.conversation-item {
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    border-bottom: 1px solid #eee;
-    transition: background 0.3s;
-}
-
-.conversation-item:hover {
-    background: #f0f2f5;
-}
-
-.conversation-item.active {
-    background: #e7f3ff;
-}
-
-.conversation-avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-.chat-area {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.chat-header {
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.messages-container {
-    flex: 1;
     padding: 20px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
 }
 
-.message {
-    max-width: 60%;
+.message-thread {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.message-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.message-content {
+    background: #f0f2f5;
     padding: 10px 15px;
     border-radius: 18px;
-    position: relative;
-}
-
-.message-sent {
-    background: #1876f2;
-    color: white;
-    align-self: flex-end;
-}
-
-.message-received {
-    background: #f0f2f5;
-    color: #050505;
-    align-self: flex-start;
-}
-
-.message-input-container {
-    padding: 15px;
-    border-top: 1px solid #ddd;
-    display: flex;
-    gap: 10px;
+    max-width: 70%;
+    margin-left: 50px;
 }
 
 .message-input {
+    display: flex;
+    margin-top: 20px;
+}
+
+.message-input input {
     flex: 1;
     padding: 12px 15px;
     border: 1px solid #ddd;
     border-radius: 20px;
     outline: none;
-    background: var(--bg-color);
-    color: var(--text-color);
+}
+
+.message-input button {
+    background: #1876f2;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 /* Notifications Page */
@@ -808,27 +686,10 @@ nav{
     display: flex;
     align-items: center;
     gap: 15px;
-    transition: background 0.3s;
-}
-
-.notification-item:hover {
-    background: #f0f2f5;
 }
 
 .notification-item.unread {
     background: #e7f3ff;
-}
-
-.notification-avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-.notification-time {
-    color: #65676b;
-    font-size: 12px;
-    margin-top: 5px;
 }
 
 /* Loading Spinner */
@@ -880,25 +741,10 @@ nav{
     .nav-label {
         display: none;
     }
-    
-    .nav-icon {
-        padding: 10px;
-    }
 }
 
 @media (max-width: 600px) {
     .search-box {
         display: none;
-    }
-    
-    .profile-info {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .profile-pic-large {
-        margin-right: 0;
-        margin-bottom: 15px;
     }
 }

@@ -1,361 +1,9 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social book</title>
-  <link rel="icon" type="image/x-icon" href="images/social-logo.png" class="icon-logo">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/5e577b06aa.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-
-  <nav>
-    <div class="nav-left">
-      <img src="images/logo.png" class="logo">
-      <ul>
-        <li><img src="images/notification.png"></li>
-        <li><img src="images/inbox.png"></li>
-        <li><img src="images/video.png"></li>
-      </ul>
-    </div>
-    <div class="nav-right">
-
-      <div class="search-box">
-        <img src="images/search.png">
-        <input type="search" placeholder="search">
-      </div>
-      <div class="nav-user-icon online" onclick="settingsMenuToggle()">
-        <img src="images/profile-pic.png">
-      </div>
-    </div>
-
-    <div class="settings-menu">
-      <div id="dark-btn">
-        <span></span>
-      </div>
-
-      <div class="settings-menu-innner">
-        <div class="user-porfile">
-          <img src="images/profile-pic.png">
-          <div>
-            <p>Abebe Tekola</p>
-            <a href="#">See your Profile</a>
-          </div>
-        </div>
-        <hr>
-        <div class="user-porfile">
-          <img src="images/feedback.png">
-          <div>
-            <p>Give Feedback</p>
-            <a href="#">Help us to improve</a>
-          </div>
-        </div>
-        <hr>
-        <div class="settings-links">
-          <img src="images/setting.png" class="settings-icon">
-          <a href="#">Settings & Privacy <img src="images/arrow.png" width="10px"></a>
-        </div>
-        <div class="settings-links">
-          <img src="images/help.png" class="settings-icon">
-          <a href="#">Help & Support <img src="images/arrow.png" width="10px"></a>
-        </div>
-        <div class="settings-links">
-          <img src="images/display.png" class="settings-icon">
-          <a href="#">Display & Accessibility <img src="images/arrow.png" width="10px"></a>
-        </div>
-        <div class="settings-links">
-          <img src="images/logout.png" class="settings-icon">
-          <a href="#">Logout<img src="images/arrow.png" width="10px"></a>
-        </div>
-
-      </div>
-
-    </div>
-
-  </nav>
-
-  <div class="container">
-    <!-- left-sidebar-----------
-    <div class="left-sidebar">
-      <div class="imp-links">
-        <a href="#">
-          <img src="images/news.png">
-          Latest News
-        </a>
-        <a href="#">
-          <img src="images/friends.png">
-          Friends
-        </a>
-        <a href="#">
-          <img src="images/group.png">
-          Group
-        </a>
-        <a href="#">
-          <img src="images/marketplace.png">
-          marketplace
-        </a>
-        <a href="#">
-          <img src="images/watch.png">
-          watch
-        </a>
-        <a href="#">
-          See More...
-        </a>
-      </div>
-      <div class="shortcut-links">
-        <p>Your Shortcuts</p>
-        <a href="#"><img src="images/shortcut-1.png">Web Developers</a>
-        <a href="#"><img src="images/shortcut-2.png">Web Design Course</a>
-        <a href="#"><img src="images/shortcut-3.png">Full Stack Development</a>
-        <a href="#"><img src="images/shortcut-4.png">Website Experts</a>
-      </div>
-    </div>
-
-    <!-- main-content----------- 
-    <div class="main-content">
-      <div class="story-gallery">
-        <div class="story story1">
-          <div class="background"></div>
-          <img src="images/upload.png">
-          <p>Post Story</p>
-        </div>
-        <div class="story story2">
-          <div class="background"></div>
-          <img src="images/member-1.png">
-          <p>Aster</p>
-        </div>
-        <div class="story story3">
-          <div class="background"></div>
-          <img src="images/member-2.png">
-          <p>Demlewo</p>
-        </div>
-        <div class="story story4">
-          <div class="background"></div>
-          <img src="images/member-3.png">
-          <p>Birtalu</p>
-        </div>
-        <div class="story story5">
-          <div class="background"></div>
-          <img src="images/member-4.png">
-          <p>Damtewo</p>
-        </div>
-      </div>
-
-      <div class="write-post-container">
-        <div class="user-porfile">
-          <img src="images/profile-pic.png">
-          <div>
-            <p>Abebe Tekola</p>
-            <small>Public <i class="fa-solid fa-caret-down"></i></small>
-          </div>
-        </div>
-
-        <div class="post-input-container">
-          <textarea rows="3" placeholder="what's on your mind, Abebe?"></textarea>
-          <div class="add-post-links">
-            <a href="#"><img src="images/live-video.png">Live Video</a>
-            <a href="#"><img src="images/photo.png">Phot/Video</a>
-            <a href="#"><img src="images/feeling.png">Feeling Activity</a>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="post-container">
-        <div class="post-row">
-          <div class="user-porfile">
-            <img src="images/profile-pic.png">
-            <div>
-              <p>Abebe Tekola</p>
-              <span>June 24 2024, 10:50 AM</span>
-            </div>
-          </div>
-          <a href="#"><i class="fas  fa-ellipsis-v"></i></a>
-        </div>
-        <p class="post-text">I am <span>doing</span> some work stu. <a href="#">#Mesewo</a>
-          <a href="#">#Kewose</a>
-        </p>
-        <img src="images/feed-image-1.png" class="post-img">
-      </div>
-      <div class="post-row">
-        <div class="activity-icons">
-          <div><img src="images/like-blue.png">120</div>
-          <div><img src="images/comments.png">230</div>
-          <div><img src="images/share.png">20</div>
-        </div>
-        <div class="post-profile-icon">
-          <img src="images/profile-pic.png"><i class="fa-solid fa-caret-down"></i>
-        </div>
-      </div>
-
-
-
-      <div class="post-container">
-        <div class="post-row">
-          <div class="user-porfile">
-            <img src="images/photo1.png">
-            <div>
-              <p>Yordi Zeberga</p>
-              <span>June 24 2024, 10:50 AM</span>
-            </div>
-          </div>
-          <a href="#"><i class="fas  fa-ellipsis-v"></i></a>
-        </div>
-        <p class="post-text">I am <span>doing</span> some work stu. <a href="#">#Mesewo</a>
-          <a href="#">#Kewose</a>
-        </p>
-        <img src="images/feed-image-2.png" class="post-img">
-      </div>
-      <div class="post-row">
-        <div class="activity-icons">
-          <div><img src="images/like-blue.png">120</div>
-          <div><img src="images/comments.png">230</div>
-          <div><img src="images/share.png">20</div>
-        </div>
-        <div class="post-profile-icon">
-          <img src="images/profile-pic.png"><i class="fa-solid fa-caret-down"></i>
-        </div>
-      </div>
-
-
-
-      <div class="post-container">
-        <div class="post-row">
-          <div class="user-porfile">
-            <img src="images/photo2.png">
-            <div>
-              <p>Mesewo Kewose</p>
-              <span>June 24 2024, 10:50 AM</span>
-            </div>
-          </div>
-          <a href="#"><i class="fas  fa-ellipsis-v"></i></a>
-        </div>
-        <p class="post-text">I am <span>doing</span> some work stu. <a href="#">#Mesewo</a>
-          <a href="#">#Kewose</a>
-        </p>
-        <img src="images/feed-image-3.png" class="post-img">
-      </div>
-      <div class="post-row">
-        <div class="activity-icons">
-          <div><img src="images/like-blue.png">120</div>
-          <div><img src="images/comments.png">230</div>
-          <div><img src="images/share.png">20</div>
-        </div>
-        <div class="post-profile-icon">
-          <img src="images/profile-pic.png"><i class="fa-solid fa-caret-down"></i>
-        </div>
-      </div>
-
-
-      <div class="post-container">
-        <div class="post-row">
-          <div class="user-porfile">
-            <img src="images/photo4.png">
-            <div>
-              <p>Demekech Meshesha</p>
-              <span>July 24 2024, 07:00 PM</span>
-            </div>
-          </div>
-          <a href="#"><i class="fas  fa-ellipsis-v"></i></a>
-        </div>
-        <p class="post-text">I am chilling with my friends. <a href="#">#Demekech</a>
-          <a href="#">#Meshesha</a>
-        </p>
-        <img src="images/feed-image-4.png" class="post-img">
-      </div>
-
-
-      <div class="post-row">
-        <div class="activity-icons">
-          <div><img src="images/like.png">20</div>
-          <div><img src="images/comments.png">230</div>
-          <div><img src="images/share.png">10</div>
-        </div>
-        <div class="post-profile-icon">
-          <img src="images/profile-pic.png"><i class="fa-solid fa-caret-down"></i>
-        </div>
-      </div>
-      <button type="button" class="load-more-button">Load More...</button>
-    </div>
-    
-
-  <!-- right-sidebar----------- --
-    <div class="right-sidebar">
-      <div class="sidebar-title">
-        <h4>Events</h4>
-        <a href="#">See All</a>
-      </div>
-      <div class="event">
-        <div class="left-event">
-          <h3>18</h3>
-          <span>March</span>
-        </div>
-        <div class="right-event">
-          <h4>Social Media</h4>
-          <p><i class="fa-solid fa-location-dot"></i>University of Gondar</p>
-          <a href="#">More Info</a>
-        </div>
-      </div>
-      <div class="event">
-        <div class="left-event">
-          <h3>22</h3>
-          <span>June</span>
-        </div>
-        <div class="right-event">
-          <h4>Mobile Marketing</h4>
-          <p><i class="fa-solid fa-location-dot"></i>University of Gondar</p>
-          <a href="#">More Info</a>
-        </div>
-      </div>
-      <div class="sidebar-title">
-        <h4>Advertisment</h4>
-        <a href="#">Close</a>
-      </div>
-      <img src="images/advertisement.png" class="sidebar-adds">
-
-      <div class="sidebar-title">
-        <h4>Conversation</h4>
-        <a href="#">Hide Chat</a>
-      </div>
-
-      <div class="online-list">
-        <div class="online">
-          <img src="images/member-1.png">
-        </div>
-        <p>Aster Kebede</p>
-      </div>
-
-      <div class="online-list">
-        <div class="online">
-          <img src="images/member-2.png">
-        </div>
-        <p>Damtewo Demse</p>
-      </div>
-      <div class="online-list">
-        <div class="online">
-          <img src="images/member-3.png">
-        </div>
-        <p>Birtalu Fendka</p>
-      </div>
-    </div>
-  </div>
-  <div class="footer">
-    <p>Copyright 2024 - Mesewo Kewose's</p>
-  </div>
-  <script src="script.js"></script>
-</body>
-
-</html>-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SocialBook</title>
+    <title>SocialBook - Home</title>
     <link rel="icon" type="image/x-icon" href="images/social-logo.png" class="icon-logo">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -364,32 +12,32 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-left">
-            <a href="/" class="nav-logo" onclick="router.navigate('/', event)">
-                <img src="images/logo.png" class="logo">
+            <a href="#" class="nav-logo" onclick="navigateTo('home')">
+                <img src="images/logo.png" class="logo" alt="SocialBook Logo">
             </a>
             <ul>
                 <li>
-                    <a href="/" onclick="router.navigate('/', event)" class="nav-icon" data-active="home">
+                    <a href="#" onclick="navigateTo('home')" class="nav-icon" id="nav-home">
                         <i class="fas fa-home"></i>
                         <span class="nav-label">Home</span>
                     </a>
                 </li>
                 <li class="messenger-icon">
-                    <a href="/messenger" onclick="router.navigate('/messenger', event)" class="nav-icon" data-active="messenger">
+                    <a href="#" onclick="navigateTo('messenger')" class="nav-icon" id="nav-messenger">
                         <i class="fas fa-comment-dots"></i>
                         <span class="nav-label">Messenger</span>
                         <span class="message-count">3</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/notifications" onclick="router.navigate('/notifications', event)" class="nav-icon" data-active="notifications">
+                    <a href="#" onclick="navigateTo('notifications')" class="nav-icon" id="nav-notifications">
                         <i class="fas fa-bell"></i>
                         <span class="nav-label">Notifications</span>
                         <span class="notification-badge">5</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/watch" onclick="router.navigate('/watch', event)" class="nav-icon" data-active="watch">
+                    <a href="#" onclick="navigateTo('watch')" class="nav-icon" id="nav-watch">
                         <i class="fas fa-play-circle"></i>
                         <span class="nav-label">Watch</span>
                     </a>
@@ -402,7 +50,7 @@
                 <input type="search" placeholder="Search SocialBook" id="search-input">
             </div>
             <div class="nav-user-icon online" onclick="settingsMenuToggle()">
-                <img src="images/profile-pic.png">
+                <img src="images/profile-pic.png" alt="Profile">
             </div>
         </div>
 
@@ -413,15 +61,15 @@
             </div>
             <div class="settings-menu-inner">
                 <div class="user-profile">
-                    <img src="images/profile-pic.png">
+                    <img src="images/profile-pic.png" alt="Profile">
                     <div>
                         <p>Abebe Tekola</p>
-                        <a href="/profile" onclick="router.navigate('/profile', event)">See your Profile</a>
+                        <a href="#" onclick="navigateTo('profile')">See your Profile</a>
                     </div>
                 </div>
                 <hr>
                 <div class="user-profile">
-                    <img src="images/feedback.png">
+                    <img src="images/feedback.png" alt="Feedback">
                     <div>
                         <p>Give Feedback</p>
                         <a href="#">Help us to improve</a>
@@ -429,42 +77,28 @@
                 </div>
                 <hr>
                 <div class="settings-links">
-                    <img src="images/setting.png" class="settings-icon">
+                    <img src="images/setting.png" class="settings-icon" alt="Settings">
                     <a href="#">Settings & Privacy <i class="fas fa-chevron-right"></i></a>
                 </div>
                 <div class="settings-links">
-                    <img src="images/help.png" class="settings-icon">
+                    <img src="images/help.png" class="settings-icon" alt="Help">
                     <a href="#">Help & Support <i class="fas fa-chevron-right"></i></a>
                 </div>
                 <div class="settings-links">
-                    <img src="images/display.png" class="settings-icon">
+                    <img src="images/display.png" class="settings-icon" alt="Display">
                     <a href="#" id="toggle-dark-mode">Dark Mode <i class="fas fa-chevron-right"></i></a>
                 </div>
                 <div class="settings-links">
-                    <img src="images/logout.png" class="settings-icon">
+                    <img src="images/logout.png" class="settings-icon" alt="Logout">
                     <a href="#" onclick="logout()">Logout <i class="fas fa-chevron-right"></i></a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content Container -->
-    <div class="container">
-        <!-- Left Sidebar -->
-        <div class="left-sidebar" id="left-sidebar">
-            <!-- Will be loaded dynamically -->
-        </div>
-
-        <!-- Main Content Area -->
-        <div class="main-content" id="main-content">
-            <!-- Content will be loaded here dynamically -->
-            <div id="page-content"></div>
-        </div>
-
-        <!-- Right Sidebar -->
-        <div class="right-sidebar" id="right-sidebar">
-            <!-- Will be loaded dynamically -->
-        </div>
+    <!-- Main Content Area - This will show different pages -->
+    <div id="app-container">
+        <!-- Content will be loaded here by JavaScript -->
     </div>
 
     <!-- Footer -->
@@ -473,7 +107,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="router.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
